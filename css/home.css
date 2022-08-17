@@ -1,0 +1,104 @@
+
+/* home div */
+.home{
+
+    height: 100vh;
+    background-image:url(../images/background/background1.webp);
+    background-size:cover;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+}
+.hover-opacity{
+    transition: opacity .5s;
+}
+.hover-opacity:hover{
+opacity: 0.8;
+}
+
+.ltr-effect ,
+.tb-effect {
+    position: relative;
+}
+
+
+.ltr-effect::after ,
+.tb-effect::after {
+ position: absolute;
+ content: "";
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: #333;
+ z-index: -1;
+
+}
+
+.ltr-effect::after{
+width: 0;
+transition: width 0.5s;
+
+}
+
+
+.tb-effect::after{
+    transition: height 0.5s;
+    height: 0;
+}
+
+
+.ltr-effect:hover::after{
+    width: 100%;
+}
+
+.tb-effect:hover::after{
+    height: 100%;
+}
+
+
+
+.home-content{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   width: 65%;
+}
+
+
+.home .title{
+    color: white;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+
+}
+.home .home-desc{
+    margin: 20px 0px;
+    color: white;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+.home .btn{
+   min-width: 160px;
+    padding: 15px 0;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+.home .btn-start{
+    margin-right: 10px;
+    background-color: white;
+}
+.home .btn-learn{
+    background-color: var(--maincolor);
+    color: white;
+}
